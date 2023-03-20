@@ -1,0 +1,274 @@
+#root {
+  display: flex;
+  max-width: 1280px;
+  color: white;
+  margin: 0 auto;
+  padding: 1rem;
+  height: 85%;
+  width: 85%;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.App {
+  width: 1024px;
+  height: 100vh;
+  width: 100vw;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .container {
+    .auth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+
+      h1 {
+        font-size: 20px;
+        color: black;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background-color: white;
+        width: 200px;
+        gap: 20px;
+
+        input {
+          padding: 10px;
+          border: none;
+          border-bottom: 1px solid gray;
+        }
+
+        button {
+          padding: 10px;
+          border: none;
+          background-color: #747bff;
+          cursor: pointer;
+          color: white;
+
+        }
+
+        span {
+
+          text-align: center;
+          color: black;
+
+        }
+
+        p {
+          font-size: 12px;
+          text-align: center;
+          color: red;
+        }
+
+      }
+
+    }
+
+    .navbar {
+      position: relative;
+      background-color: #b7bbee;
+      top: 0;
+      left: 0;
+      width: 98%;
+      height: 90px;
+
+
+      .container {
+        margin-left: 1;
+        align-items: center;
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-between;
+        max-height: 80%;
+        height: auto;
+
+        .logo {
+          img {
+            width: 120px;
+
+          }
+        }
+
+        .links {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+
+          link {
+            text-decoration: none;
+
+          }
+
+          h6 {
+            color: black;
+            font-size: 16px;
+            font-weight: 300;
+          }
+
+          span {
+            cursor: pointer;
+            color: black;
+          }
+
+          .write {
+            background-color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+            border: 1px solid black;
+
+
+
+            &:hover {
+              width: 60px;
+              height: 60px;
+              color: white;
+              background-color: #747bff;
+              border: 1px solid;
+            }
+
+            a.link {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
+    //Footer
+
+    footer {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      width: 98%;
+      margin-top: 100px;
+      padding: 20px;
+      background-color: #747bff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+
+
+      img {
+        height: 50px;
+      }
+    }
+
+    //Home-Blog
+    .home {
+      .posts {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+        .post {
+          display: flex;
+          gap: 100px;
+
+          &:nth-child(2n+1) {
+            flex-direction: row-reverse;
+          }
+
+          .img {
+            flex: 2;
+            position: relative;
+
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              background-color: #747bff;
+              position: absolute;
+              top: 20px;
+              left: -20px;
+              z-index: -1;
+            }
+
+            img {
+              width: 100%;
+              max-height: 400px;
+              object-fit: cover;
+            }
+          }
+
+          .content {
+            h1 {
+              color: black;
+              font-size: 48px;
+            }
+
+            p {
+              font-size: 18px;
+            }
+
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+
+
+
+  }
+}
